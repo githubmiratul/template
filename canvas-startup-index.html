@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(7, 3, 32);
+        }
+    </style>
+</head>
+<canvas id="mycanvas"></canvas>
+<body>
+    <script>
+        const canvas = document.getElementById('mycanvas');
+        const mycanva = canvas.getContext('2d');
+
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+        mycanva.beginPath();
+        mycanva.arc(150, 140, 50, 0, 2 * Math.PI);
+        mycanva.fillStyle = "blue";
+        mycanva.fill();
+    </script>
+</body>
+
+</html>
